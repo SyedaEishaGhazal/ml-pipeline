@@ -10,7 +10,7 @@ class TestPipeline(unittest.TestCase):
 
     def test_feature_scaling_shape(self):
         X_train, X_test, y_train, y_test = load_and_preprocess_data()
-        self.assertEqual(X_train.shape[1], 13, "Unexpected number of features")
+        self.assertEqual(X_train.shape[1], 8, "Unexpected number of features")
 
     def test_model_performance(self):
         X_train, X_test, y_train, y_test = load_and_preprocess_data()

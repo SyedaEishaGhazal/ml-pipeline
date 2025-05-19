@@ -1,18 +1,14 @@
-from sklearn.datasets import load_boston
+from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
-import numpy as np
 
 def load_and_preprocess_data():
-    boston = load_boston()
-    X = pd.DataFrame(boston.data, columns=boston.feature_names)
-    y = pd.Series(boston.target)
+    housing = fetch_california_housing(as_frame=True)
+    X = pd.DataFrame(housing.data, columns=housing.feature_names)
+    y = pd.Series(housing.target)
 
-    # Handle missing values
-    X.fillna(X.mean(), inplace=True)
-
-    # Normalize
+    # Normalize the data
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
 
