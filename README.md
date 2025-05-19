@@ -8,7 +8,7 @@ This repository implements and automates a complete machine learning workflow us
 
 ## Workflow Details
 
-### 1. Machine Learning Pipeline
+### 1. Machine Learning Pipeline - Github
 
 - **Dataset:** California Housing dataset (public dataset).
 - **Preprocessing:** Handling missing values, normalization/scaling of features.
