@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run tests
+      - name: Run unit tests
         run: |
           python -m unittest test_pipeline.py
 
@@ -36,4 +36,7 @@ jobs:
           python train_model.py
 
       - name: Upload trained model
-        uses: actions/upload-a
+        uses: actions/upload-artifact@v4
+        with:
+          name: svm-model
+          path: svm_model.pkl
